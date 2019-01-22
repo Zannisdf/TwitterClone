@@ -11,17 +11,19 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
+  <div class="tweet">
+    <div class="tweet-head d-flex align-items-center">
+      <%= form.label :title, class:'col-sm-2' %>
+      <%= form.text_field :title, class:'col-sm-10' %>
+    </div>
 
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_area :content %>
+    <div class="tweet-body no-footer d-flex align-items-center">
+      <%= form.label :content, class:'col-sm-2' %>
+      <%= form.text_area :content, class:'col-sm-10' %>
+    </div>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit 'Submit!', class: 'btn btn-primary'%>
   </div>
 <% end %>

@@ -1,6 +1,9 @@
-<h1>Editing Tweet</h1>
-
+<div class="top-panel">
+  <h1>Editing Tweet</h1>
+</div>
 <%= render 'form', tweet: @tweet %>
 
-<%= link_to 'Show', @tweet %> |
-<%= link_to 'Back', tweets_path %>
+<div class="actions">
+  <%= link_to 'Show', @tweet %> |
+  <%= link_to 'Back', tweets_path %>
+</div>

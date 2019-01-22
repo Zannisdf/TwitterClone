@@ -1,14 +1,29 @@
 <p id="notice"><%= notice %></p>
+<div class="top-panel">
+  <h1>Show Tweet</h1>
+</div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @tweet.title %>
-</p>
+<div class="tweet">
+  <div class="tweet-head d-flex align-items-center">
+    <div class="col-sm-2">
+      <p><strong>Title:</strong></p>
+    </div>
+    <p class="col-sm-10">
+      <%= @tweet.title %>
+    </p>
+  </div>
+  <div class="tweet-body no-footer d-flex align-items-center">
+    <div class="col-sm-2">
+      <p><strong>Content:</strong></p>
+    </div>
+    <p class="col-sm-10">
+      <%= @tweet.content %>
+    </p>
+  </div>
 
-<p>
-  <strong>Content:</strong>
-  <%= @tweet.content %>
-</p>
+</div>
 
-<%= link_to 'Edit', edit_tweet_path(@tweet) %> |
-<%= link_to 'Back', tweets_path %>
+<div class="actions">
+  <%= link_to 'Edit', edit_tweet_path(@tweet) %> |
+  <%= link_to 'Back', tweets_path %>
+</div>
